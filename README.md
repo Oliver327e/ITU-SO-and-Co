@@ -3,8 +3,6 @@ Handin 2 is for help when coding (will be removed)
 chit chat is the actual code
 
 
-
-
 ## Regenerate chitchat_grpc.pb.go and chitchat.pb.go when changing chitchat.proto
 
 When changing the chitchat proto remember to regenerate the two files using:

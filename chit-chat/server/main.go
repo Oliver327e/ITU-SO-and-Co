@@ -30,7 +30,7 @@ func main() {
     // Create the gRPC server.
     grpcServer := grpc.NewServer()
 
-    // Register our ChatService.
+    // Register ChatService.
     chatpb.RegisterChatServiceServer(grpcServer, &chatServer{})
 
     // Handle shutdown signals.
