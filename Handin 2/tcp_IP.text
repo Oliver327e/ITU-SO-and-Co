@@ -1,0 +1,92 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"os"
+	"sync"
+)
+
+type handshake struct {
+	sequence int
+	ACK      int
+	data     int
+}
+
+func client(TCP_ch chan handshake) {
+	seq := rand.Intn(100)
+	request := handshake{seq, -1, -1}
+	fmt.Printf("Client has sent sequence: %d\n", seq)
+	TCP_ch <- request
+	res := <-TCP_ch
+
+	if res.ACK != seq+1 {
+		fmt.Printf("Client error: Unexpected ACK (%d), expected %d\n", res.ACK, seq+1)
+		os.Exit(1)
+	}
+
+	if res.sequence < 0 {
+		fmt.Println("Client error: Invalid sequence number received from server")
+		os.Exit(1)
+	}
+
+	ack := res.sequence + 1
+	seq1 := res.ACK
+	dataNum := rand.Intn(100)
+	data := handshake{seq1, ack, dataNum}
+	TCP_ch <- data
+
+}
+
+func server(TCP_ch chan handshake) {
+	req := <-TCP_ch
+
+	if req.ACK != -1 {
+		fmt.Printf("Server error: Unexpected initial ACK received (%d), expected -1\n", req.ACK)
+		os.Exit(1)
+	}
+
+	if req.sequence < 0 {
+		fmt.Println("Server error: Invalid initial client sequence number")
+		os.Exit(1)
+	}
+
+	seq := rand.Intn(100)
+	fmt.Printf("Server has received: %d\n", req.sequence)
+	ack := req.sequence + 1
+	response := handshake{seq, ack, -1}
+	fmt.Printf("Server has responded with ack: %d, and sequence: %d\n", ack, seq)
+	TCP_ch <- response
+	data := <-TCP_ch
+
+	if data.sequence != ack {
+		fmt.Printf("Server error: Unexpected data sequence (%d), expected %d\n", data.sequence, ack)
+		os.Exit(1)
+	}
+
+	if data.ACK != seq+1 {
+		fmt.Printf("Server error: Unexpected data ACK (%d), expected %d\n", data.ACK, seq+1)
+		os.Exit(1)
+	}
+
+	fmt.Printf("Server has received data sequence: %d, ack: %d, and data: %d\n", data.sequence, data.ACK, data.data)
+}
+
+func main() {
+    TCP_ch := make(chan handshake)
+
+    var wg sync.WaitGroup
+    wg.Add(2)
+
+    go func() {
+        defer wg.Done()
+        client(TCP_ch)
+    }()
+
+    go func() {
+        defer wg.Done()
+        server(TCP_ch)
+    }()
+
+    wg.Wait()
+}
