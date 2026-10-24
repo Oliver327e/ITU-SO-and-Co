@@ -25,3 +25,8 @@ Starts the server
 ```
 go run ./server
 ```
+
+Add a client
+```
+go run ./client -id X
+```
