@@ -13,9 +13,9 @@ go mod tidy
 Test that the GO Packages compiles.
 Should say something like:
 
-?  github.com/YOURUSERNAME/chit-chat/client           [no test files]
-?  github.com/YOURUSERNAME/chit-chat/chit-chat/grpc     [no test files]
-?  github.com/YOURUSERNAME/chit-chat/chit-chat/server   [no test files]
+?  github.com/YOURUSERNAME/chit-chat/client           [no test files] \
+?  github.com/YOURUSERNAME/chit-chat/chit-chat/grpc     [no test files] \
+?  github.com/YOURUSERNAME/chit-chat/chit-chat/server   [no test files] \
 
 ```
 go test ./...
