@@ -1,3 +1,16 @@
 {
-    "folder-color.pathColors": []
+    "folder-color.pathColors": [
+        {
+            "filePath": "ITU-SO-and-Co/chit-chat/server/main.go",
+            "color": "foldercolorizer.color_87af00"
+        },
+        {
+            "filePath": "ITU-SO-and-Co/chit-chat/client/main.go",
+            "color": "foldercolorizer.color_87af00"
+        },
+        {
+            "filePath": "ITU-SO-and-Co/chit-chat/grpc/chitchat.proto",
+            "color": "foldercolorizer.color_5f5fd7"
+        }
+    ]
 }
