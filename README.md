@@ -1,32 +1,36 @@
-### Regenerate chitchat_grpc.pb.go and chitchat.pb.go when changing chitchat.proto
+# Chit Chat
 
-When changing the chitchat proto remember to regenerate the two files using the below command in the terminal with the root as chit-chat
+Chit Chat is a distributed chat application made in Go using gRPC and Protocol Buffers. Clients can join, send messages, and leave. Lamport clocks are used to keep track of logical time.
 
-protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative grpc/chitchat.proto
+## How to run
 
-## Usefull commands
-Ensures that your project's go.mod and go.sum files match the actual source code in your project
-```
-go mod tidy
-```
+Install the dependencies if needed:
 
-Test that the GO Packages compiles.
-Should say something like:
+`go mod tidy`
 
-?  github.com/YOURUSERNAME/chit-chat/client           [no test files] \
-?  github.com/YOURUSERNAME/chit-chat/chit-chat/grpc     [no test files] \
-?  github.com/YOURUSERNAME/chit-chat/chit-chat/server   [no test files]
+Start the server:
 
-```
-go test ./...
-```
+`go run ./server`
 
-Starts the server
-```
-go run ./server
-```
+Open three new terminals and start the clients:
 
-Add a client
-```
-go run ./client -id X
-```
+`go run ./client -id X`
+`go run ./client -id Y`
+`go run ./client -id Z`
+
+## How to use
+
+- Type a message and press Enter to send it.
+- Type `/leave` to leave the chat.
+- All active clients receive messages and join/leave notifications.
+- Each message has a Lamport timestamp.
+
+## Testing
+
+Run the tests:
+
+`go test ./...`
+
+## Logs
+
+The server and clients save their logs in the logs/ folder. The logs show connections, messages, disconnections, and logical timestamps.
