@@ -14,8 +14,8 @@ Start the server:
 
 Open three new terminals and start the clients:
 
-`go run ./client -id X`
-`go run ./client -id Y`
+`go run ./client -id X` \
+`go run ./client -id Y` \
 `go run ./client -id Z`
 
 ## How to use
