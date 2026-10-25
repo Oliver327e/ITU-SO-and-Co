@@ -48,7 +48,6 @@ func main() {
 	var clockMutex sync.Mutex
 	var logicalClock uint64
 
-	// join the chat
 	logicalClock++
 
 	joinContext, cancelJoin := context.WithCancel(context.Background())

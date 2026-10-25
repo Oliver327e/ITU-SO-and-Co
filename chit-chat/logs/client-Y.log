@@ -65,3 +65,26 @@
 2026/10/25 21:19:48.694192 component=Client event=message_received client_id=Y sender_id=X logical_time=9 local_clock=10 content="Hello!"
 2026/10/25 21:20:13.213268 component=Client event=message_received client_id=Y sender_id=X logical_time=14 local_clock=15 content="Participant X left Chit Chat at logical time 14"
 2026/10/25 21:20:49.940823 component=Client event=disconnected client_id=Y error=rpc error: code = Unavailable desc = error reading from server: EOF
+2026/10/25 21:54:44.430810 component=Client event=join_requested client_id=Y
+2026/10/25 21:54:44.432340 component=Client event=message_received client_id=Y sender_id=Y logical_time=10 local_clock=11 content="Participant Y joined Chit Chat at logical time 10"
+2026/10/25 21:55:37.536143 component=Client event=message_received client_id=Y sender_id=X logical_time=12 local_clock=13 content="Participant X left Chit Chat at logical time 12"
+2026/10/25 21:55:52.425744 component=Client event=join_requested client_id=Y
+2026/10/25 21:55:52.428071 component=Client event=message_received client_id=Y sender_id=Y logical_time=5 local_clock=6 content="Participant Y joined Chit Chat at logical time 5"
+2026/10/25 21:55:58.108637 component=Client event=message_received client_id=Y sender_id=Y logical_time=9 local_clock=10 content="hello!"
+2026/10/25 22:00:05.973352 component=Client event=message_received client_id=Y sender_id=X logical_time=12 local_clock=13 content="Participant X left Chit Chat at logical time 12"
+2026/10/25 22:00:40.377714 component=Client event=join_requested client_id=Y
+2026/10/25 22:00:40.378350 component=Client event=message_received client_id=Y sender_id=Y logical_time=5 local_clock=6 content="Participant Y joined Chit Chat at logical time 5"
+2026/10/25 22:00:51.335099 component=Client event=message_received client_id=Y sender_id=Z logical_time=7 local_clock=8 content="Participant Z joined Chit Chat at logical time 7"
+2026/10/25 22:01:12.999184 component=Client event=message_received client_id=Y sender_id=X logical_time=11 local_clock=12 content="Participant X left Chit Chat at logical time 11"
+2026/10/25 22:11:50.325064 component=Client event=join_requested client_id=Y
+2026/10/25 22:11:50.325728 component=Client event=message_received client_id=Y sender_id=Y logical_time=5 local_clock=6 content="Participant Y joined Chit Chat at logical time 5"
+2026/10/25 22:11:51.379965 component=Client event=message_received client_id=Y sender_id=Z logical_time=7 local_clock=8 content="Participant Z joined Chit Chat at logical time 7"
+2026/10/25 22:20:11.568984 component=Client event=message_received client_id=Y sender_id=X logical_time=9 local_clock=10 content="Participant X left Chit Chat at logical time 9"
+2026/10/25 22:20:46.353525 component=Client event=join_requested client_id=Y
+2026/10/25 22:20:46.353751 component=Client event=message_received client_id=Y sender_id=Y logical_time=5 local_clock=6 content="Participant Y joined Chit Chat at logical time 5"
+2026/10/25 22:20:48.328926 component=Client event=message_received client_id=Y sender_id=Z logical_time=7 local_clock=8 content="Participant Z joined Chit Chat at logical time 7"
+2026/10/25 22:20:54.006071 component=Client event=message_received client_id=Y sender_id=X logical_time=11 local_clock=12 content="Hello"
+2026/10/25 22:28:54.984527 component=Client event=message_received client_id=Y sender_id=Z logical_time=14 local_clock=15 content="Participant Z left Chit Chat at logical time 14"
+2026/10/25 22:38:01.424758 component=Client event=join_requested client_id=Y
+2026/10/25 22:38:01.425141 component=Client event=message_received client_id=Y sender_id=Y logical_time=5 local_clock=6 content="Participant Y joined Chit Chat at logical time 5"
+2026/10/25 22:38:03.372490 component=Client event=message_received client_id=Y sender_id=Z logical_time=7 local_clock=8 content="Participant Z joined Chit Chat at logical time 7"

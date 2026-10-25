@@ -5,7 +5,7 @@ package chitchat;
 
 option go_package = "github.com/oliver327e/chit-chat/grpc;chatpb";
 
-// The gRPC service
+
 service ChatService {
 
     // A client joins and receives broadcasts
@@ -18,13 +18,13 @@ service ChatService {
     rpc Leave(LeaveRequest) returns (LeaveResponse);
 }
 
-// Request sent when a participant joins
+
 message JoinRequest {
     string participant_id = 1;
     uint64 logical_time = 2;
 }
 
-// Request sent when a participant publishes
+
 message PublishRequest {
     string participant_id = 1;
     string text = 2;
@@ -46,7 +46,6 @@ message LeaveResponse {
     uint64 logical_time = 2;
 }
 
-// Different kinds of broadcast events
 enum BroadcastType {
     BROADCAST_TYPE_UNSPECIFIED = 0;
     BROADCAST_TYPE_CHAT = 1;
@@ -54,7 +53,6 @@ enum BroadcastType {
     BROADCAST_TYPE_LEAVE = 3;
 }
 
-// Messages the server sends to participants
 message Broadcast {
     string content = 1;
     uint64 logical_time = 2;
