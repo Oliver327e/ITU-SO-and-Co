@@ -263,3 +263,21 @@
 2026/10/25 19:23:28.107467 component=Server event=client_disconnected client_id=X
 2026/10/25 19:23:28.107525 component=Server event=broadcast_leave client_id=Y logical_time=55
 2026/10/25 19:23:28.107547 component=Server event=client_disconnected client_id=Y
+2026/10/25 21:18:53.413448 Server - startup on port=50051
+2026/10/25 21:19:20.356762 Server - client_connected client_id=X
+2026/10/25 21:19:20.356878 Server - broadcast_join client_id=X logical_time=3
+2026/10/25 21:19:20.357075 Server - message_sent client_id=X logical_time=3
+2026/10/25 21:19:32.326707 Server - client_connected client_id=Y
+2026/10/25 21:19:32.326830 Server - broadcast_join client_id=Y logical_time=5
+2026/10/25 21:19:32.327034 Server - message_sent client_id=Y logical_time=5
+2026/10/25 21:19:32.326752 Server - message_sent client_id=X logical_time=5
+2026/10/25 21:19:48.693931 component=Server event=broadcast_chat client_id=X logical_time=9 content="Hello!"
+2026/10/25 21:19:48.693966 Server - message_sent client_id=X logical_time=9
+2026/10/25 21:19:48.693983 Server - message_sent client_id=Y logical_time=9
+2026/10/25 21:20:13.213101 component=Server event=broadcast_leave client_id=X logical_time=14
+2026/10/25 21:20:13.213192 component=Server event=client_left client_id=X logical_time=14
+2026/10/25 21:20:13.213134 Server - message_sent client_id=Y logical_time=14
+2026/10/25 21:20:13.213206 component=Server event=client_disconnected client_id=X
+2026/10/25 21:20:49.939944 Server - shutdown
+2026/10/25 21:20:49.940545 component=Server event=broadcast_leave client_id=Y logical_time=17
+2026/10/25 21:20:49.940578 component=Server event=client_disconnected client_id=Y

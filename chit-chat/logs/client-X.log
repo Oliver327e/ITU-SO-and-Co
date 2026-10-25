@@ -69,3 +69,9 @@
 2026/10/25 19:22:46.121589 component=Client event=message_received client_id=X sender_id=Z logical_time=46 local_clock=47 content="Participant Z left Chit Chat at logical time 46"
 2026/10/25 19:23:25.115750 component=Client event=message_received client_id=X sender_id=Y logical_time=50 local_clock=51 content="test is now donis now done closing the server"
 2026/10/25 19:23:28.107703 component=Client event=disconnected client_id=X error=rpc error: code = Unavailable desc = error reading from server: EOF
+2026/10/25 21:19:20.356029 component=Client event=join_requested client_id=X
+2026/10/25 21:19:20.357968 component=Client event=message_received client_id=X sender_id=X logical_time=3 local_clock=4 content="Participant X joined Chit Chat at logical time 3"
+2026/10/25 21:19:32.327078 component=Client event=message_received client_id=X sender_id=Y logical_time=5 local_clock=6 content="Participant Y joined Chit Chat at logical time 5"
+2026/10/25 21:19:48.694142 component=Client event=message_received client_id=X sender_id=X logical_time=9 local_clock=10 content="Hello!"
+2026/10/25 21:20:13.213386 component=Client event=disconnected client_id=X error=EOF
+2026/10/25 21:20:13.213415 component=Client event=left client_id=X
