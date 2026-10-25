@@ -1,0 +1,203 @@
+2026/10/25 18:52:00.384365 Server - startup on port=50051
+2026/10/25 18:52:06.386735 Server - client_connected client_id=X
+2026/10/25 18:52:06.386784 Server - broadcast_join client_id=X logical_time=3
+2026/10/25 18:52:06.386874 Server - message_sent client_id=X logical_time=3
+2026/10/25 18:52:08.302691 Server - client_connected client_id=Y
+2026/10/25 18:52:08.302723 Server - broadcast_join client_id=Y logical_time=5
+2026/10/25 18:52:08.302737 Server - message_sent client_id=Y logical_time=5
+2026/10/25 18:52:08.302708 Server - message_sent client_id=X logical_time=5
+2026/10/25 18:52:09.305396 Server - client_connected client_id=Z
+2026/10/25 18:52:09.305449 Server - broadcast_join client_id=Z logical_time=7
+2026/10/25 18:52:09.305472 Server - message_sent client_id=X logical_time=7
+2026/10/25 18:52:09.305435 Server - message_sent client_id=Y logical_time=7
+2026/10/25 18:52:09.305482 Server - message_sent client_id=Z logical_time=7
+2026/10/25 18:52:28.988385 component=Server event=broadcast_chat client_id=X logical_time=11 content="test"
+2026/10/25 18:52:28.988544 Server - message_sent client_id=Z logical_time=11
+2026/10/25 18:52:28.988415 Server - message_sent client_id=X logical_time=11
+2026/10/25 18:52:28.988420 Server - message_sent client_id=Y logical_time=11
+2026/10/25 18:52:34.904958 component=Server event=broadcast_chat client_id=Y logical_time=15 content="wow this works"
+2026/10/25 18:52:34.904984 Server - message_sent client_id=X logical_time=15
+2026/10/25 18:52:34.904999 Server - message_sent client_id=Y logical_time=15
+2026/10/25 18:52:34.905060 Server - message_sent client_id=Z logical_time=15
+2026/10/25 18:52:42.472022 component=Server event=broadcast_chat client_id=Z logical_time=19 content="yelp"
+2026/10/25 18:52:42.472052 Server - message_sent client_id=X logical_time=19
+2026/10/25 18:52:42.472062 Server - message_sent client_id=Y logical_time=19
+2026/10/25 18:52:42.472095 Server - message_sent client_id=Z logical_time=19
+2026/10/25 18:52:47.226081 component=Server event=broadcast_chat client_id=X logical_time=23 content="nah mate"
+2026/10/25 18:52:47.226113 Server - message_sent client_id=X logical_time=23
+2026/10/25 18:52:47.226130 Server - message_sent client_id=Y logical_time=23
+2026/10/25 18:52:47.226172 Server - message_sent client_id=Z logical_time=23
+2026/10/25 18:52:57.552769 component=Server event=broadcast_chat client_id=Y logical_time=27 content="you do you do?"
+2026/10/25 18:52:57.552806 Server - message_sent client_id=Y logical_time=27
+2026/10/25 18:52:57.552826 Server - message_sent client_id=Z logical_time=27
+2026/10/25 18:52:57.552881 Server - message_sent client_id=X logical_time=27
+2026/10/25 18:53:39.291022 component=Server event=broadcast_chat client_id=Z logical_time=31 content="This is a very long message ----------------------------------------------------------------------------------------------------"
+2026/10/25 18:53:39.291043 Server - message_sent client_id=X logical_time=31
+2026/10/25 18:53:39.291047 Server - message_sent client_id=Y logical_time=31
+2026/10/25 18:53:39.291059 Server - message_sent client_id=Z logical_time=31
+2026/10/25 18:54:39.185837 component=Server event=broadcast_chat client_id=Z logical_time=41 content="This is a very long message -------------------------------------------------------------------------------------------"
+2026/10/25 18:54:39.186031 Server - message_sent client_id=X logical_time=41
+2026/10/25 18:54:39.186052 Server - message_sent client_id=Y logical_time=41
+2026/10/25 18:54:39.185873 Server - message_sent client_id=Z logical_time=41
+2026/10/25 18:54:59.860147 component=Server event=broadcast_chat client_id=Z logical_time=47 content="> This is a very long message -------------------------------------------------------------------------------------------------"
+2026/10/25 18:54:59.860179 Server - message_sent client_id=Y logical_time=47
+2026/10/25 18:54:59.860215 Server - message_sent client_id=X logical_time=47
+2026/10/25 18:54:59.860217 Server - message_sent client_id=Z logical_time=47
+2026/10/25 18:55:09.118467 component=Server event=broadcast_chat client_id=Z logical_time=53 content="This is a very long message --------------------------------------------------------------------------------------------------"
+2026/10/25 18:55:09.118509 Server - message_sent client_id=X logical_time=53
+2026/10/25 18:55:09.118561 Server - message_sent client_id=Y logical_time=53
+2026/10/25 18:55:09.118602 Server - message_sent client_id=Z logical_time=53
+2026/10/25 18:55:11.609389 component=Server event=broadcast_chat client_id=Z logical_time=58 content="This is a very long message ---------------------------------------------------------------------------------------------------"
+2026/10/25 18:55:11.609413 Server - message_sent client_id=X logical_time=58
+2026/10/25 18:55:11.609423 Server - message_sent client_id=Y logical_time=58
+2026/10/25 18:55:11.609451 Server - message_sent client_id=Z logical_time=58
+2026/10/25 18:55:14.587178 component=Server event=broadcast_chat client_id=Z logical_time=63 content="This is a very long message ----------------------------------------------------------------------------------------------------"
+2026/10/25 18:55:14.587219 Server - message_sent client_id=X logical_time=63
+2026/10/25 18:55:14.587222 Server - message_sent client_id=Y logical_time=63
+2026/10/25 18:55:14.587279 Server - message_sent client_id=Z logical_time=63
+2026/10/25 18:55:39.120021 component=Server event=broadcast_chat client_id=Z logical_time=70 content="This is a very long message ------------------------------------------------------------"
+2026/10/25 18:55:39.120060 Server - message_sent client_id=Z logical_time=70
+2026/10/25 18:55:39.120124 Server - message_sent client_id=X logical_time=70
+2026/10/25 18:55:39.120167 Server - message_sent client_id=Y logical_time=70
+2026/10/25 18:56:34.919351 Server - message_sent client_id=Z logical_time=75
+2026/10/25 18:56:34.919359 Server - message_sent client_id=X logical_time=75
+2026/10/25 18:56:34.919324 component=Server event=broadcast_chat client_id=Z logical_time=75 content="This message is exacty 128 char ---------------------------------------------------------\x1b["
+2026/10/25 18:56:34.919391 Server - message_sent client_id=Y logical_time=75
+2026/10/25 18:56:53.986681 component=Server event=broadcast_chat client_id=Z logical_time=80 content="This message is exacty 128 char ---------------------------------------------------------\\x------"
+2026/10/25 18:56:53.986732 Server - message_sent client_id=X logical_time=80
+2026/10/25 18:56:53.986747 Server - message_sent client_id=Y logical_time=80
+2026/10/25 18:56:53.986795 Server - message_sent client_id=Z logical_time=80
+2026/10/25 18:57:15.396759 component=Server event=broadcast_chat client_id=Z logical_time=85 content="they weren't just tried to make but doesn't bother counting"
+2026/10/25 18:57:15.396785 Server - message_sent client_id=X logical_time=85
+2026/10/25 18:57:15.396799 Server - message_sent client_id=Y logical_time=85
+2026/10/25 18:57:15.396825 Server - message_sent client_id=Z logical_time=85
+2026/10/25 18:57:26.502249 component=Server event=broadcast_chat client_id=Z logical_time=90 content="gonne leave now"
+2026/10/25 18:57:26.502301 Server - message_sent client_id=Z logical_time=90
+2026/10/25 18:57:26.502337 Server - message_sent client_id=X logical_time=90
+2026/10/25 18:57:26.502381 Server - message_sent client_id=Y logical_time=90
+2026/10/25 18:57:32.941592 component=Server event=broadcast_leave client_id=Z logical_time=96
+2026/10/25 18:57:32.941710 component=Server event=client_left client_id=Z logical_time=96
+2026/10/25 18:57:32.941621 Server - message_sent client_id=Y logical_time=96
+2026/10/25 18:57:32.941622 Server - message_sent client_id=X logical_time=96
+2026/10/25 18:57:32.941736 component=Server event=client_disconnected client_id=Z
+2026/10/25 18:57:38.871706 component=Server event=broadcast_chat client_id=Y logical_time=100 content="damn"
+2026/10/25 18:57:38.871735 Server - message_sent client_id=X logical_time=100
+2026/10/25 18:57:38.871748 Server - message_sent client_id=Y logical_time=100
+2026/10/25 18:57:45.273265 component=Server event=broadcast_chat client_id=Y logical_time=105 content="gonna leave too"
+2026/10/25 18:57:45.273363 Server - message_sent client_id=Y logical_time=105
+2026/10/25 18:57:45.273553 Server - message_sent client_id=X logical_time=105
+2026/10/25 18:57:48.062012 component=Server event=broadcast_leave client_id=Y logical_time=111
+2026/10/25 18:57:48.062126 component=Server event=client_left client_id=Y logical_time=111
+2026/10/25 18:57:48.062059 Server - message_sent client_id=X logical_time=111
+2026/10/25 18:57:48.062144 component=Server event=client_disconnected client_id=Y
+2026/10/25 18:57:53.369292 component=Server event=broadcast_chat client_id=X logical_time=115 content="all alone now"
+2026/10/25 18:57:53.369312 Server - message_sent client_id=X logical_time=115
+2026/10/25 18:57:59.025608 component=Server event=broadcast_leave client_id=X logical_time=120
+2026/10/25 18:57:59.025672 component=Server event=client_left client_id=X logical_time=120
+2026/10/25 18:57:59.025689 component=Server event=client_disconnected client_id=X
+2026/10/25 18:58:14.319834 Server - client_connected client_id=X
+2026/10/25 18:58:14.319918 Server - broadcast_join client_id=X logical_time=123
+2026/10/25 18:58:14.319959 Server - message_sent client_id=X logical_time=123
+2026/10/25 18:58:18.363837 component=Server event=broadcast_chat client_id=X logical_time=127 content="joined agian"
+2026/10/25 18:58:18.363881 Server - message_sent client_id=X logical_time=127
+2026/10/25 18:58:24.224442 component=Server event=broadcast_chat client_id=X logical_time=132 content="again*"
+2026/10/25 18:58:24.224501 Server - message_sent client_id=X logical_time=132
+2026/10/25 18:58:56.979300 component=Server event=broadcast_leave client_id=X logical_time=135
+2026/10/25 18:58:56.979371 component=Server event=client_disconnected client_id=X
+2026/10/25 18:59:29.312743 Server - client_connected client_id=Y
+2026/10/25 18:59:29.312806 Server - broadcast_join client_id=Y logical_time=137
+2026/10/25 18:59:29.312834 Server - message_sent client_id=Y logical_time=137
+2026/10/25 19:02:21.891618 Server - shutdown
+2026/10/25 19:02:21.892289 component=Server event=broadcast_leave client_id=Y logical_time=139
+2026/10/25 19:02:21.892360 component=Server event=client_disconnected client_id=Y
+2026/10/25 19:02:47.047251 Server - startup on port=50051
+2026/10/25 19:02:54.318756 Server - client_connected client_id=X
+2026/10/25 19:02:54.318870 Server - broadcast_join client_id=X logical_time=3
+2026/10/25 19:02:54.319113 Server - message_sent client_id=X logical_time=3
+2026/10/25 19:03:00.319799 Server - client_connected client_id=Y
+2026/10/25 19:03:00.319880 Server - broadcast_join client_id=Y logical_time=5
+2026/10/25 19:03:00.319939 Server - message_sent client_id=Y logical_time=5
+2026/10/25 19:03:00.319854 Server - message_sent client_id=X logical_time=5
+2026/10/25 19:03:03.318874 Server - client_connected client_id=Z
+2026/10/25 19:03:03.319018 Server - broadcast_join client_id=Z logical_time=7
+2026/10/25 19:03:03.318970 Server - message_sent client_id=X logical_time=7
+2026/10/25 19:03:03.318978 Server - message_sent client_id=Y logical_time=7
+2026/10/25 19:03:03.319344 Server - message_sent client_id=Z logical_time=7
+2026/10/25 19:03:28.428499 component=Server event=broadcast_chat client_id=Z logical_time=11 content="test"
+2026/10/25 19:03:28.428571 Server - message_sent client_id=Y logical_time=11
+2026/10/25 19:03:28.428575 Server - message_sent client_id=X logical_time=11
+2026/10/25 19:03:28.428618 Server - message_sent client_id=Z logical_time=11
+2026/10/25 19:03:30.606762 component=Server event=broadcast_chat client_id=Y logical_time=15 content="test"
+2026/10/25 19:03:30.606822 Server - message_sent client_id=X logical_time=15
+2026/10/25 19:03:30.606824 Server - message_sent client_id=Z logical_time=15
+2026/10/25 19:03:30.606931 Server - message_sent client_id=Y logical_time=15
+2026/10/25 19:03:32.543090 component=Server event=broadcast_chat client_id=X logical_time=19 content="go run -race ./client -id Ytest"
+2026/10/25 19:03:32.543138 Server - message_sent client_id=Z logical_time=19
+2026/10/25 19:03:32.543138 Server - message_sent client_id=X logical_time=19
+2026/10/25 19:03:32.543141 Server - message_sent client_id=Y logical_time=19
+2026/10/25 19:03:33.799149 component=Server event=broadcast_chat client_id=Y logical_time=23 content="test"
+2026/10/25 19:03:33.799190 Server - message_sent client_id=Z logical_time=23
+2026/10/25 19:03:33.799190 Server - message_sent client_id=Y logical_time=23
+2026/10/25 19:03:33.799260 Server - message_sent client_id=X logical_time=23
+2026/10/25 19:03:35.279598 component=Server event=broadcast_chat client_id=Z logical_time=27 content="test"
+2026/10/25 19:03:35.279655 Server - message_sent client_id=Z logical_time=27
+2026/10/25 19:03:35.279671 Server - message_sent client_id=Y logical_time=27
+2026/10/25 19:03:35.279686 Server - message_sent client_id=X logical_time=27
+2026/10/25 19:03:37.155388 component=Server event=broadcast_chat client_id=Y logical_time=31 content="test"
+2026/10/25 19:03:37.155576 Server - message_sent client_id=Z logical_time=31
+2026/10/25 19:03:37.155444 Server - message_sent client_id=Y logical_time=31
+2026/10/25 19:03:37.155442 Server - message_sent client_id=X logical_time=31
+2026/10/25 19:03:38.493385 component=Server event=broadcast_chat client_id=X logical_time=35 content="test"
+2026/10/25 19:03:38.493415 Server - message_sent client_id=X logical_time=35
+2026/10/25 19:03:38.493446 Server - message_sent client_id=Z logical_time=35
+2026/10/25 19:03:38.493523 Server - message_sent client_id=Y logical_time=35
+2026/10/25 19:03:46.665653 component=Server event=broadcast_chat client_id=X logical_time=40 content="test"
+2026/10/25 19:03:46.665700 Server - message_sent client_id=X logical_time=40
+2026/10/25 19:03:46.665705 Server - message_sent client_id=Y logical_time=40
+2026/10/25 19:03:46.665797 Server - message_sent client_id=Z logical_time=40
+2026/10/25 19:03:47.058872 component=Server event=broadcast_chat client_id=X logical_time=45 content="test"
+2026/10/25 19:03:47.059045 Server - message_sent client_id=X logical_time=45
+2026/10/25 19:03:47.058937 Server - message_sent client_id=Y logical_time=45
+2026/10/25 19:03:47.058930 Server - message_sent client_id=Z logical_time=45
+2026/10/25 19:03:47.300605 component=Server event=broadcast_chat client_id=X logical_time=51 content="test"
+2026/10/25 19:03:47.300649 Server - message_sent client_id=Z logical_time=51
+2026/10/25 19:03:47.300649 Server - message_sent client_id=X logical_time=51
+2026/10/25 19:03:47.300699 Server - message_sent client_id=Y logical_time=51
+2026/10/25 19:03:49.651059 component=Server event=broadcast_chat client_id=X logical_time=56 content="test"
+2026/10/25 19:03:49.651147 Server - message_sent client_id=X logical_time=56
+2026/10/25 19:03:49.651163 Server - message_sent client_id=Y logical_time=56
+2026/10/25 19:03:49.651125 Server - message_sent client_id=Z logical_time=56
+2026/10/25 19:03:51.416889 component=Server event=broadcast_chat client_id=Y logical_time=60 content="test"
+2026/10/25 19:03:51.416945 Server - message_sent client_id=X logical_time=60
+2026/10/25 19:03:51.416944 Server - message_sent client_id=Y logical_time=60
+2026/10/25 19:03:51.417063 Server - message_sent client_id=Z logical_time=60
+2026/10/25 19:03:52.898309 component=Server event=broadcast_chat client_id=Z logical_time=64 content="test"
+2026/10/25 19:03:52.898354 Server - message_sent client_id=Z logical_time=64
+2026/10/25 19:03:52.898355 Server - message_sent client_id=X logical_time=64
+2026/10/25 19:03:52.898445 Server - message_sent client_id=Y logical_time=64
+2026/10/25 19:03:55.191952 component=Server event=broadcast_chat client_id=Y logical_time=68 content="test"
+2026/10/25 19:03:55.192007 Server - message_sent client_id=Z logical_time=68
+2026/10/25 19:03:55.192038 Server - message_sent client_id=X logical_time=68
+2026/10/25 19:03:55.192091 Server - message_sent client_id=Y logical_time=68
+2026/10/25 19:03:56.692349 component=Server event=broadcast_chat client_id=Z logical_time=72 content="test"
+2026/10/25 19:03:56.692420 Server - message_sent client_id=X logical_time=72
+2026/10/25 19:03:56.692452 Server - message_sent client_id=Y logical_time=72
+2026/10/25 19:03:56.692498 Server - message_sent client_id=Z logical_time=72
+2026/10/25 19:03:57.871217 component=Server event=broadcast_chat client_id=X logical_time=76 content="test"
+2026/10/25 19:03:57.871283 Server - message_sent client_id=X logical_time=76
+2026/10/25 19:03:57.871300 Server - message_sent client_id=Y logical_time=76
+2026/10/25 19:03:57.871378 Server - message_sent client_id=Z logical_time=76
+2026/10/25 19:04:08.912534 component=Server event=broadcast_chat client_id=X logical_time=81 content="Was testing data race"
+2026/10/25 19:04:08.912615 Server - message_sent client_id=Y logical_time=81
+2026/10/25 19:04:08.912845 Server - message_sent client_id=Z logical_time=81
+2026/10/25 19:04:08.912695 Server - message_sent client_id=X logical_time=81
+2026/10/25 19:04:39.416906 component=Server event=broadcast_leave client_id=Y logical_time=84
+2026/10/25 19:04:39.417026 component=Server event=client_disconnected client_id=Y
+2026/10/25 19:04:39.416979 Server - message_sent client_id=Z logical_time=84
+2026/10/25 19:04:39.417195 Server - message_sent client_id=X logical_time=84
+2026/10/25 19:04:41.137331 component=Server event=broadcast_leave client_id=Z logical_time=86
+2026/10/25 19:04:41.137453 component=Server event=client_disconnected client_id=Z
+2026/10/25 19:04:41.137489 Server - message_sent client_id=X logical_time=86
+2026/10/25 19:04:42.198108 component=Server event=broadcast_leave client_id=X logical_time=88
+2026/10/25 19:04:42.198265 component=Server event=client_disconnected client_id=X
+2026/10/25 19:04:43.260214 Server - shutdown
