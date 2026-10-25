@@ -4,6 +4,7 @@ Chit Chat is a distributed chat application made in Go using gRPC and Protocol B
 
 ## How to run
 
+Make sure Go is installed.
 Install the dependencies if needed:
 
 `go mod tidy`
