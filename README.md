@@ -22,7 +22,7 @@ Open three new terminals and start the clients:
 ## How to use
 
 - Type a message and press Enter to send it.
-- Type `/leave` to leave the chat.
+- Type `/leave` or enter `CTRL+C` to leave the chat.
 - All active clients receive messages and join/leave notifications.
 - Each message has a Lamport timestamp.
 
