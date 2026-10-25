@@ -32,6 +32,9 @@ Run the tests:
 
 `go test ./...`
 
+The test only test whether the server catches invalid messages.
+A valid message is a UTF-8 encoded string with a maximum length of 128 characters.
+
 ## Logs
 
 The server and clients save their logs in the logs/ folder. The logs show connections, messages, disconnections, and logical timestamps.
