@@ -75,14 +75,14 @@ func (server *chatServer) Join(request *chatpb.JoinRequest, stream chatpb.ChatSe
 		default:
 			delete(server.participants, otherParticipantID)
 			close(otherParticipant.disconnectSignal)
-			log.Printf("Server - slow_client client_id=%s", otherParticipantID)
+			log.Printf("component=Server event=slow_client client_id=%s", otherParticipantID)
 		}
 	}
 
 	server.mutex.Unlock()
 
-	log.Printf("Server - client_connected client_id=%s", participantID)
-	log.Printf("Server - broadcast_join client_id=%s logical_time=%d", participantID, logicalTime)
+	log.Printf("component=Server event=client_connected client_id=%s", participantID)
+	log.Printf("component=Server event=broadcast_join client_id=%s logical_time=%d", participantID, logicalTime)
 
 	defer func() {
 		server.removeParticipant(participantID, newParticipant, 0)
@@ -105,7 +105,7 @@ func (server *chatServer) Join(request *chatpb.JoinRequest, stream chatpb.ChatSe
 			}
 
 			log.Printf(
-				"Server - message_sent client_id=%s logical_time=%d",
+				"component=Server event=message_sent client_id=%s logical_time=%d",
 				participantID,
 				broadcastMessage.GetLogicalTime(),
 			)
@@ -283,7 +283,7 @@ func main() {
 
 	listener, err := net.Listen("tcp", ":50051")
 	if err != nil {
-		log.Fatalf("Server - startup_failed error=%v", err)
+		log.Fatalf("component=Server event=startup_failed error=%v", err)
 	}
 
 	grpcServer := grpc.NewServer()
@@ -298,13 +298,13 @@ func main() {
 
 	go func() {
 		<-shutdownSignals
-		log.Println("Server - shutdown")
+		log.Println("component=Server event=shutdown")
 		grpcServer.Stop()
 	}()
 
-	log.Println("Server - startup on port=50051")
+	log.Println("component=Server event=startup on port=50051")
 
 	if err := grpcServer.Serve(listener); err != nil {
-		log.Fatalf("Server - server_error error=%v", err)
+		log.Fatalf("component=Server event=server_error error=%v", err)
 	}
 }
