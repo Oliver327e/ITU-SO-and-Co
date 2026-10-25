@@ -201,3 +201,65 @@
 2026/10/25 19:04:42.198108 component=Server event=broadcast_leave client_id=X logical_time=88
 2026/10/25 19:04:42.198265 component=Server event=client_disconnected client_id=X
 2026/10/25 19:04:43.260214 Server - shutdown
+2026/10/25 19:20:41.931666 Server - startup on port=50051
+2026/10/25 19:20:48.366269 Server - client_connected client_id=X
+2026/10/25 19:20:48.366314 Server - broadcast_join client_id=X logical_time=3
+2026/10/25 19:20:48.366393 Server - message_sent client_id=X logical_time=3
+2026/10/25 19:20:53.315444 Server - client_connected client_id=Y
+2026/10/25 19:20:53.315579 Server - broadcast_join client_id=Y logical_time=5
+2026/10/25 19:20:53.315506 Server - message_sent client_id=X logical_time=5
+2026/10/25 19:20:53.315644 Server - message_sent client_id=Y logical_time=5
+2026/10/25 19:20:55.315386 Server - client_connected client_id=Z
+2026/10/25 19:20:55.315479 Server - broadcast_join client_id=Z logical_time=7
+2026/10/25 19:20:55.315578 Server - message_sent client_id=Z logical_time=7
+2026/10/25 19:20:55.315484 Server - message_sent client_id=Y logical_time=7
+2026/10/25 19:20:55.315435 Server - message_sent client_id=X logical_time=7
+2026/10/25 19:21:03.089907 component=Server event=broadcast_chat client_id=X logical_time=11 content="Hello from X"
+2026/10/25 19:21:03.089962 Server - message_sent client_id=Y logical_time=11
+2026/10/25 19:21:03.089952 Server - message_sent client_id=X logical_time=11
+2026/10/25 19:21:03.089994 Server - message_sent client_id=Z logical_time=11
+2026/10/25 19:21:10.018060 component=Server event=broadcast_chat client_id=Y logical_time=15 content="Hello from Y"
+2026/10/25 19:21:10.018097 Server - message_sent client_id=Z logical_time=15
+2026/10/25 19:21:10.018099 Server - message_sent client_id=X logical_time=15
+2026/10/25 19:21:10.018122 Server - message_sent client_id=Y logical_time=15
+2026/10/25 19:21:18.445497 component=Server event=broadcast_chat client_id=Z logical_time=19 content="Hello from Z"
+2026/10/25 19:21:18.445518 Server - message_sent client_id=X logical_time=19
+2026/10/25 19:21:18.445538 Server - message_sent client_id=Y logical_time=19
+2026/10/25 19:21:18.445570 Server - message_sent client_id=Z logical_time=19
+2026/10/25 19:21:34.746630 component=Server event=broadcast_chat client_id=X logical_time=23 content="X is now leaving"
+2026/10/25 19:21:34.746660 Server - message_sent client_id=X logical_time=23
+2026/10/25 19:21:34.746670 Server - message_sent client_id=Y logical_time=23
+2026/10/25 19:21:34.746715 Server - message_sent client_id=Z logical_time=23
+2026/10/25 19:21:37.039368 component=Server event=broadcast_leave client_id=X logical_time=28
+2026/10/25 19:21:37.039494 component=Server event=client_left client_id=X logical_time=28
+2026/10/25 19:21:37.039587 component=Server event=client_disconnected client_id=X
+2026/10/25 19:21:37.039398 Server - message_sent client_id=Y logical_time=28
+2026/10/25 19:21:37.039402 Server - message_sent client_id=Z logical_time=28
+2026/10/25 19:22:02.573159 Server - message_sent client_id=Y logical_time=32
+2026/10/25 19:22:02.573138 component=Server event=broadcast_chat client_id=Z logical_time=32 content="Hello again from Z now when X is gone is"
+2026/10/25 19:22:02.573177 Server - message_sent client_id=Z logical_time=32
+2026/10/25 19:22:12.330588 Server - client_connected client_id=X
+2026/10/25 19:22:12.330731 Server - broadcast_join client_id=X logical_time=35
+2026/10/25 19:22:12.330618 Server - message_sent client_id=Y logical_time=35
+2026/10/25 19:22:12.330628 Server - message_sent client_id=Z logical_time=35
+2026/10/25 19:22:12.330786 Server - message_sent client_id=X logical_time=35
+2026/10/25 19:22:19.731189 component=Server event=broadcast_chat client_id=X logical_time=39 content="X is now back"
+2026/10/25 19:22:19.731239 Server - message_sent client_id=X logical_time=39
+2026/10/25 19:22:19.731276 Server - message_sent client_id=Y logical_time=39
+2026/10/25 19:22:19.731327 Server - message_sent client_id=Z logical_time=39
+2026/10/25 19:22:44.574285 component=Server event=broadcast_chat client_id=Z logical_time=43 content="disconnecting forcefully from Z using CTRL+C"
+2026/10/25 19:22:44.574326 Server - message_sent client_id=X logical_time=43
+2026/10/25 19:22:44.574355 Server - message_sent client_id=Y logical_time=43
+2026/10/25 19:22:44.574391 Server - message_sent client_id=Z logical_time=43
+2026/10/25 19:22:46.121259 component=Server event=broadcast_leave client_id=Z logical_time=46
+2026/10/25 19:22:46.121363 component=Server event=client_disconnected client_id=Z
+2026/10/25 19:22:46.121296 Server - message_sent client_id=X logical_time=46
+2026/10/25 19:22:46.121387 Server - message_sent client_id=Y logical_time=46
+2026/10/25 19:23:25.115383 component=Server event=broadcast_chat client_id=Y logical_time=50 content="test is now donis now done closing the server"
+2026/10/25 19:23:25.115411 Server - message_sent client_id=X logical_time=50
+2026/10/25 19:23:25.115431 Server - message_sent client_id=Y logical_time=50
+2026/10/25 19:23:28.106693 Server - shutdown
+2026/10/25 19:23:28.107379 component=Server event=broadcast_leave client_id=X logical_time=53
+2026/10/25 19:23:28.107467 component=Server event=client_disconnected client_id=X
+2026/10/25 19:23:28.107525 component=Server event=broadcast_leave client_id=Y logical_time=55
+2026/10/25 19:23:28.107547 component=Server event=client_disconnected client_id=Y
