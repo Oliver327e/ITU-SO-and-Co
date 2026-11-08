@@ -3,9 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"math"
 	"net"
+	"os"
 
 	chatpb "github.com/oliver327e/chit-chat/grpc"
 	"google.golang.org/grpc"
@@ -13,12 +15,30 @@ import (
 )
 
 func main() {
+
 	nodeID := flag.Int("id", 0, "node ID from nodes.json")
 	flag.Parse()
 
 	if *nodeID <= 0 || int64(*nodeID) > math.MaxInt32 {
 		log.Fatal("Please provide a positive node ID using -id")
 	}
+
+	logPath := fmt.Sprintf("logs/node-%d.log", *nodeID)
+
+	if err := os.MkdirAll("logs", 0755); err != nil {
+		log.Fatal(err)
+	}
+	logFile, err := os.OpenFile(
+		logPath,
+		os.O_CREATE|os.O_WRONLY|os.O_APPEND,
+		0644,
+	)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer logFile.Close()
+	log.SetOutput(io.MultiWriter(os.Stderr, logFile))
 
 	peers, localAddress, err := loadPeers("nodes.json", int32(*nodeID))
 	if err != nil {
@@ -51,7 +71,7 @@ func main() {
 
 		node.clients[peer.ID] = chatpb.NewMutualExclusionClient(connection)
 
-		fmt.Printf(
+		log.Printf(
 			"Node %d prepared a client for node %d at %s\n",
 			node.id,
 			peer.ID,
@@ -62,7 +82,7 @@ func main() {
 	grpcServer := grpc.NewServer()
 	chatpb.RegisterMutualExclusionServer(grpcServer, node)
 
-	fmt.Printf(
+	log.Printf(
 		"Node %d is listening on %s. Found %d nodes in the config.\n",
 		node.id,
 		localAddress,
