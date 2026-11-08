@@ -1,0 +1,69 @@
+2026/11/08 16:52:58.131684 Node 1 prepared a client for node 2 at 127.0.0.1:5002
+2026/11/08 16:52:58.131841 Node 1 prepared a client for node 3 at 127.0.0.1:5003
+2026/11/08 16:52:58.131855 Node 1 is listening on 127.0.0.1:5001. Found 3 nodes in the config.
+2026/11/08 16:53:05.783354 node=1 RECEIVE_REQUEST from=3 request=1 clock=2
+2026/11/08 16:53:05.783407 node=1 SEND_REPLY to=3 request=1 clock=3
+2026/11/08 16:53:09.678429 node=1 RECEIVE_REQUEST from=2 request=4 clock=5
+2026/11/08 16:53:09.678503 node=1 SEND_REPLY to=2 request=4 clock=6
+2026/11/08 16:53:16.033522 node=1 REQUEST request=7 peers=2
+2026/11/08 16:53:16.033739 node=1 SEND_REQUEST to=2 request=7
+2026/11/08 16:53:16.033745 node=1 SEND_REQUEST to=3 request=7
+2026/11/08 16:53:16.035879 node=1 RECEIVE_REPLY from=3 request=7 clock=10
+2026/11/08 16:53:16.035937 node=1 RECEIVE_REPLY from=2 request=7 clock=11
+2026/11/08 16:53:16.035989 node=1 ENTER_CS request=7
+2026/11/08 16:53:19.037093 node=1 EXIT_CS request=7
+2026/11/08 16:53:33.787071 node=1 RECEIVE_REQUEST from=3 request=10 clock=12
+2026/11/08 16:53:33.787196 node=1 SEND_REPLY to=3 request=10 clock=13
+2026/11/08 16:53:37.437387 node=1 RECEIVE_REQUEST from=2 request=13 clock=14
+2026/11/08 16:53:37.437480 node=1 SEND_REPLY to=2 request=13 clock=15
+2026/11/08 16:53:39.262099 node=1 REQUEST request=16 peers=2
+2026/11/08 16:53:39.262333 node=1 SEND_REQUEST to=2 request=16
+2026/11/08 16:53:39.262341 node=1 SEND_REQUEST to=3 request=16
+2026/11/08 16:53:39.263572 node=1 RECEIVE_REPLY from=3 request=16 clock=20
+2026/11/08 16:53:40.439514 node=1 RECEIVE_REPLY from=2 request=16 clock=22
+2026/11/08 16:53:40.439618 node=1 ENTER_CS request=16
+2026/11/08 16:53:43.440748 node=1 EXIT_CS request=16
+2026/11/08 17:06:56.664626 Node 1 prepared a client for node 2 at 127.0.0.1:5002
+2026/11/08 17:06:56.664749 Node 1 prepared a client for node 3 at 127.0.0.1:5003
+2026/11/08 17:06:56.664786 Node 1 is listening on 127.0.0.1:5001. Found 3 nodes in the config.
+2026/11/08 17:06:58.599815 node=1 REQUEST request=1 peers=2
+2026/11/08 17:06:58.600064 node=1 SEND_REQUEST to=2 request=1
+2026/11/08 17:06:58.600099 node=1 SEND_REQUEST to=3 request=1
+2026/11/08 17:07:12.740868 node=1 RECEIVE_REPLY from=3 request=1 clock=4
+2026/11/08 17:07:13.889020 node=1 RECEIVE_REQUEST from=3 request=4 clock=5
+2026/11/08 17:07:13.889138 node=1 DEFER to=3 request=4
+2026/11/08 17:07:14.370400 node=1 RECEIVE_REPLY from=2 request=1 clock=9
+2026/11/08 17:07:14.370479 node=1 ENTER_CS request=1
+2026/11/08 17:07:17.371620 node=1 EXIT_CS request=1
+2026/11/08 17:07:17.371718 node=1 REQUEST request=10 peers=2
+2026/11/08 17:07:17.371736 node=1 SEND_REPLY to=3 request=4 clock=11
+2026/11/08 17:07:17.371767 node=1 SEND_REQUEST to=3 request=10
+2026/11/08 17:07:17.371775 node=1 SEND_REQUEST to=2 request=10
+2026/11/08 17:07:17.372294 node=1 RECEIVE_REPLY from=2 request=10 clock=13
+2026/11/08 17:07:19.411228 Could not enter critical section: request failed: rpc error: code = Unavailable desc = error reading from server: EOF
+2026/11/08 17:13:48.605193 Node 1 prepared a client for node 2 at 127.0.0.1:5002
+2026/11/08 17:13:48.605366 Node 1 prepared a client for node 3 at 127.0.0.1:5003
+2026/11/08 17:13:48.605384 Node 1 is listening on 127.0.0.1:5001. Found 3 nodes in the config.
+2026/11/08 17:14:21.195769 node=1 RECEIVE_REQUEST from=2 request=1 clock=2
+2026/11/08 17:14:21.195828 node=1 SEND_REPLY to=2 request=1 clock=3
+2026/11/08 17:14:23.207427 node=1 REQUEST request=4 peers=2
+2026/11/08 17:14:23.207660 node=1 SEND_REQUEST to=2 request=4
+2026/11/08 17:14:23.207643 node=1 SEND_REQUEST to=3 request=4
+2026/11/08 17:14:23.209653 node=1 RECEIVE_REPLY from=3 request=4 clock=7
+2026/11/08 17:14:24.197967 node=1 RECEIVE_REPLY from=2 request=4 clock=8
+2026/11/08 17:14:24.198048 node=1 ENTER_CS request=4
+2026/11/08 17:14:25.709741 node=1 RECEIVE_REQUEST from=3 request=7 clock=9
+2026/11/08 17:14:25.709837 node=1 DEFER to=3 request=7
+2026/11/08 17:14:27.199217 node=1 EXIT_CS request=4
+2026/11/08 17:14:27.199474 node=1 SEND_REPLY to=3 request=7 clock=10
+2026/11/08 17:14:33.844945 node=1 RECEIVE_REQUEST from=2 request=10 clock=11
+2026/11/08 17:14:33.845063 node=1 SEND_REPLY to=2 request=10 clock=12
+2026/11/08 17:14:36.191454 node=1 REQUEST request=13 peers=2
+2026/11/08 17:14:36.191644 node=1 SEND_REQUEST to=3 request=13
+2026/11/08 17:14:36.191639 node=1 SEND_REQUEST to=2 request=13
+2026/11/08 17:14:36.192340 node=1 RECEIVE_REPLY from=3 request=13 clock=16
+2026/11/08 17:14:36.847042 node=1 RECEIVE_REPLY from=2 request=13 clock=18
+2026/11/08 17:14:36.847125 node=1 ENTER_CS request=13
+2026/11/08 17:14:39.848257 node=1 EXIT_CS request=13
+2026/11/08 17:14:40.004654 node=1 RECEIVE_REQUEST from=3 request=16 clock=19
+2026/11/08 17:14:40.004778 node=1 SEND_REPLY to=3 request=16 clock=20

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bufio"
+	"context"
 	"flag"
 	"fmt"
 	"io"
@@ -8,6 +10,8 @@ import (
 	"math"
 	"net"
 	"os"
+	"strings"
+	"time"
 
 	chatpb "github.com/oliver327e/chit-chat/grpc"
 	"google.golang.org/grpc"
@@ -39,6 +43,7 @@ func main() {
 
 	defer logFile.Close()
 	log.SetOutput(io.MultiWriter(os.Stderr, logFile))
+	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
 
 	peers, localAddress, err := loadPeers("nodes.json", int32(*nodeID))
 	if err != nil {
@@ -89,7 +94,36 @@ func main() {
 		len(peers),
 	)
 
-	if err := grpcServer.Serve(listener); err != nil {
-		log.Fatal(err)
+	go func() {
+		if err := grpcServer.Serve(listener); err != nil {
+			log.Printf("gRPC server stopped: %v", err)
+		}
+	}()
+	defer grpcServer.Stop()
+
+	fmt.Println("Type enter to request the critical section.")
+	fmt.Println("Press Ctrl+C to stop the node.")
+
+	scanner := bufio.NewScanner(os.Stdin)
+
+	for scanner.Scan() {
+		command := strings.TrimSpace(scanner.Text())
+
+		if command != "enter" {
+			fmt.Println("Type enter to request access.")
+			continue
+		}
+
+		err := node.enterCriticalSection(
+			context.Background(),
+			3*time.Second,
+		)
+		if err != nil {
+			log.Printf("Could not enter critical section: %v", err)
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		log.Printf("Could not read input: %v", err)
 	}
 }
