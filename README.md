@@ -50,10 +50,6 @@ The current node test checks that an earlier timestamp gets priority and that th
 
 The nodes print their startup and request-related messages in the terminal. The request logic logs events such as requests, replies, and critical section entry and exit.
 
-The current `main.go` does not yet save node logs to files.
-
-
-
 # Chit Chat (Mandatory activity 3)
 
 Chit Chat is a distributed chat application made in Go using gRPC and Protocol Buffers. Clients can join, send messages, and leave. Lamport clocks are used to keep track of logical time.
