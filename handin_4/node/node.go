@@ -255,3 +255,17 @@ func (node *Node) enterCriticalSection(
 
 	return ctx.Err()
 }
+
+func (node *Node) release() {
+	node.mutex.Lock()
+	defer node.mutex.Unlock()
+
+	node.state = released
+
+	for _, permission := range node.deferredReplies {
+		close(permission)
+	}
+
+	node.deferredReplies = nil
+}
+
