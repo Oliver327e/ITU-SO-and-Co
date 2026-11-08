@@ -1,4 +1,4 @@
-# Distributed Mutual Exclusion (Mandatory activity 4)
+# Distributed Mutual Exclusion (Mandatory activty 4)
 
 This project implements distributed mutual exclusion in Go using gRPC and Protocol Buffers. The nodes use the Ricart-Agrawala algorithm to coordinate access to a critical section. Lamport clocks and node IDs are used to order requests.
 
@@ -30,11 +30,15 @@ Each node is both a gRPC server and a client of the other nodes. The node IDs an
 
 ## How to use
 
-- Start all three nodes using the commands above.
-- Each node listens on its configured address and prepares clients for the other nodes.
-- Press **Ctrl+C** in each terminal to stop the nodes.
+Start all three nodes using the commands above.
 
-The request and reply logic is in `node/node.go`. Terminal input for starting a critical section request still needs to be connected in `node/main.go`.
+Wait until each node is listening.
+
+Type enter and press Enter in a node’s terminal to request access to the critical section.
+
+A node waits for a reply from every other node before entering.
+
+Keep all three nodes running until the requests finish, then press Ctrl+C in each terminal to stop them.
 
 ## Testing
 
@@ -48,7 +52,9 @@ The current node test checks that an earlier timestamp gets priority and that th
 
 ## Logs
 
-The nodes print their startup and request-related messages in the terminal. The request logic logs events such as requests, replies, and critical section entry and exit.
+The nodes print their startup and request-related messages in the terminal and save them in the logs/ folder. Each node has its own log file: node-1.log, node-2.log, or node-3.log.
+
+The logs show requests, replies, delayed replies, and critical section entry and exit. New entries are appended to the existing log files.
 
 # Chit Chat (Mandatory activity 3)
 
