@@ -60,3 +60,17 @@
 2026/11/08 17:14:36.846615 node=2 SEND_REPLY to=1 request=13 clock=17
 2026/11/08 17:14:40.004654 node=2 RECEIVE_REQUEST from=3 request=16 clock=18
 2026/11/08 17:14:40.004718 node=2 SEND_REPLY to=3 request=16 clock=19
+2026/11/08 18:10:03.050877 Node 2 prepared a client for node 1 at 127.0.0.1:5001
+2026/11/08 18:10:03.051115 Node 2 prepared a client for node 3 at 127.0.0.1:5003
+2026/11/08 18:10:03.051186 Node 2 is listening on 127.0.0.1:5002. Found 3 nodes in the config.
+2026/11/08 18:10:08.338394 node=2 RECEIVE_REQUEST from=3 request=1 clock=2
+2026/11/08 18:10:08.338467 node=2 SEND_REPLY to=3 request=1 clock=3
+2026/11/08 18:10:09.535665 node=2 REQUEST request=4 peers=2
+2026/11/08 18:10:09.535913 node=2 SEND_REQUEST to=1 request=4
+2026/11/08 18:10:09.536018 node=2 SEND_REQUEST to=3 request=4
+2026/11/08 18:10:09.537906 node=2 RECEIVE_REPLY from=1 request=4 clock=7
+2026/11/08 18:10:11.278652 node=2 RECEIVE_REQUEST from=1 request=7 clock=8
+2026/11/08 18:10:11.278760 node=2 DEFER to=1 request=7
+2026/11/08 18:10:11.340679 node=2 RECEIVE_REPLY from=3 request=4 clock=10
+2026/11/08 18:10:11.340765 node=2 ENTER_CS request=4
+2026/11/08 18:10:14.341908 node=2 EXIT_CS request=4
