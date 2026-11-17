@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	auctionpb "github.com/oliver327e/handin_5/api"
+	auctionpb "github.com/oliver327e/handin_5/grpc"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	auctionpb "github.com/oliver327e/handin_5/api"
+	auctionpb "github.com/oliver327e/handin_5/grpc"
 	"github.com/oliver327e/handin_5/internal/auction"
 
 	"google.golang.org/grpc"
