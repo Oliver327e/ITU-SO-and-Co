@@ -18,7 +18,7 @@ func main() {
 	address := flag.String("address", "127.0.0.1:50051", "Server address")
 	peer := flag.String("peer", "127.0.0.1:50052", "Other server address")
 	role := flag.String("role", "primary", "primary or backup")
-	duration := flag.Duration("duration", 100*time.Second, "Auction duration")
+	duration := flag.Duration("duration", 60*time.Second, "Auction duration")
 	flag.Parse()
 
 	if *role != "primary" && *role != "backup" {
