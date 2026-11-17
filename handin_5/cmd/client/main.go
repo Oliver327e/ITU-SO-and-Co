@@ -17,6 +17,7 @@ func main() {
 	action := flag.String("action", "result", "Action: bid or result")
 	bidderID := flag.String("bidder", "", "Your bidder ID")
 	amount := flag.Int64("amount", 0, "Bid amount")
+	requestID := flag.String("request-id", "", "Unique ID for this bid")
 	flag.Parse()
 
 	connection, err := grpc.NewClient(
@@ -40,8 +41,9 @@ func main() {
 		}
 
 		request := &auctionpb.BidRequest{
-			BidderId: *bidderID,
-			Amount:   *amount,
+			BidderId:  *bidderID,
+			Amount:    *amount,
+			RequestId: *requestID,
 		}
 
 		response, err := client.Bid(ctx, request)

@@ -273,6 +273,86 @@ func (x *ResultResponse) GetHighestBidder() string {
 	return ""
 }
 
+type StateUpdate struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	State         []byte                 `protobuf:"bytes,1,opt,name=state,proto3" json:"state,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *StateUpdate) Reset() {
+	*x = StateUpdate{}
+	mi := &file_api_auction_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *StateUpdate) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*StateUpdate) ProtoMessage() {}
+
+func (x *StateUpdate) ProtoReflect() protoreflect.Message {
+	mi := &file_api_auction_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use StateUpdate.ProtoReflect.Descriptor instead.
+func (*StateUpdate) Descriptor() ([]byte, []int) {
+	return file_api_auction_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *StateUpdate) GetState() []byte {
+	if x != nil {
+		return x.State
+	}
+	return nil
+}
+
+type StateAck struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *StateAck) Reset() {
+	*x = StateAck{}
+	mi := &file_api_auction_proto_msgTypes[5]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *StateAck) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*StateAck) ProtoMessage() {}
+
+func (x *StateAck) ProtoReflect() protoreflect.Message {
+	mi := &file_api_auction_proto_msgTypes[5]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use StateAck.ProtoReflect.Descriptor instead.
+func (*StateAck) Descriptor() ([]byte, []int) {
+	return file_api_auction_proto_rawDescGZIP(), []int{5}
+}
+
 var File_api_auction_proto protoreflect.FileDescriptor
 
 const file_api_auction_proto_rawDesc = "" +
@@ -291,7 +371,11 @@ const file_api_auction_proto_rawDesc = "" +
 	"\bfinished\x18\x01 \x01(\bR\bfinished\x12\x1f\n" +
 	"\vhighest_bid\x18\x02 \x01(\x03R\n" +
 	"highestBid\x12%\n" +
-	"\x0ehighest_bidder\x18\x03 \x01(\tR\rhighestBidder*s\n" +
+	"\x0ehighest_bidder\x18\x03 \x01(\tR\rhighestBidder\"#\n" +
+	"\vStateUpdate\x12\x14\n" +
+	"\x05state\x18\x01 \x01(\fR\x05state\"\n" +
+	"\n" +
+	"\bStateAck*s\n" +
 	"\n" +
 	"BidOutcome\x12\x1b\n" +
 	"\x17BID_OUTCOME_UNSPECIFIED\x10\x00\x12\x17\n" +
@@ -300,7 +384,9 @@ const file_api_auction_proto_rawDesc = "" +
 	"\x15BID_OUTCOME_EXCEPTION\x10\x032}\n" +
 	"\x0eAuctionService\x120\n" +
 	"\x03Bid\x12\x13.auction.BidRequest\x1a\x14.auction.BidResponse\x129\n" +
-	"\x06Result\x12\x16.auction.ResultRequest\x1a\x17.auction.ResultResponseB.Z,github.com/oliver327e/handin_5/api;auctionpbb\x06proto3"
+	"\x06Result\x12\x16.auction.ResultRequest\x1a\x17.auction.ResultResponse2L\n" +
+	"\x12ReplicationService\x126\n" +
+	"\vUpdateState\x12\x14.auction.StateUpdate\x1a\x11.auction.StateAckB.Z,github.com/oliver327e/handin_5/api;auctionpbb\x06proto3"
 
 var (
 	file_api_auction_proto_rawDescOnce sync.Once
@@ -315,22 +401,26 @@ func file_api_auction_proto_rawDescGZIP() []byte {
 }
 
 var file_api_auction_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_api_auction_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_api_auction_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_api_auction_proto_goTypes = []any{
 	(BidOutcome)(0),        // 0: auction.BidOutcome
 	(*BidRequest)(nil),     // 1: auction.BidRequest
 	(*BidResponse)(nil),    // 2: auction.BidResponse
 	(*ResultRequest)(nil),  // 3: auction.ResultRequest
 	(*ResultResponse)(nil), // 4: auction.ResultResponse
+	(*StateUpdate)(nil),    // 5: auction.StateUpdate
+	(*StateAck)(nil),       // 6: auction.StateAck
 }
 var file_api_auction_proto_depIdxs = []int32{
 	0, // 0: auction.BidResponse.outcome:type_name -> auction.BidOutcome
 	1, // 1: auction.AuctionService.Bid:input_type -> auction.BidRequest
 	3, // 2: auction.AuctionService.Result:input_type -> auction.ResultRequest
-	2, // 3: auction.AuctionService.Bid:output_type -> auction.BidResponse
-	4, // 4: auction.AuctionService.Result:output_type -> auction.ResultResponse
-	3, // [3:5] is the sub-list for method output_type
-	1, // [1:3] is the sub-list for method input_type
+	5, // 3: auction.ReplicationService.UpdateState:input_type -> auction.StateUpdate
+	2, // 4: auction.AuctionService.Bid:output_type -> auction.BidResponse
+	4, // 5: auction.AuctionService.Result:output_type -> auction.ResultResponse
+	6, // 6: auction.ReplicationService.UpdateState:output_type -> auction.StateAck
+	4, // [4:7] is the sub-list for method output_type
+	1, // [1:4] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
 	1, // [1:1] is the sub-list for extension extendee
 	0, // [0:1] is the sub-list for field type_name
@@ -347,9 +437,9 @@ func file_api_auction_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_api_auction_proto_rawDesc), len(file_api_auction_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   4,
+			NumMessages:   6,
 			NumExtensions: 0,
-			NumServices:   1,
+			NumServices:   2,
 		},
 		GoTypes:           file_api_auction_proto_goTypes,
 		DependencyIndexes: file_api_auction_proto_depIdxs,

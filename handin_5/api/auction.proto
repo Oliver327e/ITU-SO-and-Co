@@ -33,3 +33,13 @@ message ResultResponse {
   int64 highest_bid = 2;
   string highest_bidder = 3;
 }
+
+service ReplicationService {
+  rpc UpdateState(StateUpdate) returns (StateAck);
+}
+
+message StateUpdate {
+  bytes state = 1;
+}
+
+message StateAck {}
