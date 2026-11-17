@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package auction;
+
+option go_package = "github.com/oliver327e/handin_5/api;auctionpb";
+
+service AuctionService {
+  rpc Bid(BidRequest) returns (BidResponse);
+  rpc Result(ResultRequest) returns (ResultResponse);
+}
+
+message BidRequest {
+  string bidder_id = 1;
+  int64 amount = 2;
+  string request_id = 3;
+}
+
+enum BidOutcome {
+  BID_OUTCOME_UNSPECIFIED = 0;
+  BID_OUTCOME_SUCCESS = 1;
+  BID_OUTCOME_FAIL = 2;
+  BID_OUTCOME_EXCEPTION = 3;
+}
+
+message BidResponse {
+  BidOutcome outcome = 1;
+}
+
+message ResultRequest {}
+
+message ResultResponse {
+  bool finished = 1;
+  int64 highest_bid = 2;
+  string highest_bidder = 3;
+}
