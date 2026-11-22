@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package auction;
 
-option go_package = "github.com/oliver327e/handin_5/api;auctionpb";
+option go_package = "github.com/oliver327e/handin_5/grpc;auctionpb";
 
 service AuctionService {
   rpc Bid(BidRequest) returns (BidResponse);
@@ -36,6 +36,7 @@ message ResultResponse {
 
 service ReplicationService {
   rpc UpdateState(StateUpdate) returns (StateAck);
+  rpc Ping(PingRequest) returns (PingResponse);
 }
 
 message StateUpdate {
@@ -43,3 +44,5 @@ message StateUpdate {
 }
 
 message StateAck {}
+message PingRequest {}
+message PingResponse {}
